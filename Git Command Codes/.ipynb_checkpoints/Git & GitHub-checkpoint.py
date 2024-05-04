@@ -1,0 +1,292 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "6cd15f9e-0df7-42fc-97a5-533d9039333f",
+   "metadata": {},
+   "source": [
+    "# Git Command Code"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dd3f4173-aada-44ed-9938-b179eff240c5",
+   "metadata": {},
+   "source": [
+    "  *Git is a mature, actively maintained open source project originally developed in 2005 by Linus Torvalds, the famous creater of the Linux operating system kernel. A staggering number of software projects rely on Git for version control, including commerical projects as well as open source.*"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8c1396e7-6f16-467e-9d8b-07f4768a96da",
+   "metadata": {},
+   "source": [
+    "**1. Getting & Creating Projects** <p>*1-1. Intialize a local git repository*</p>\n",
+    "\n",
+    "    $ git init\n",
+    "\n",
+    "*<p>1-2. Create a local copy of a remote repository*</p>\n",
+    "\n",
+    "    $ git clone (repository address)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "466822eb-afdf-4a4d-9d91-406905858ade",
+   "metadata": {},
+   "source": [
+    "**2. Basic Snapshotting** <p>*2-1. Check status*</p>\n",
+    "\n",
+    "    $ git status\n",
+    "\n",
+    "*<p>2-2. Add a file to the staging area*</p>\n",
+    "\n",
+    "    $ git add (file name.format)\n",
+    "\n",
+    "*<p>2-3. Add all new & changed files to the staging area*</p>\n",
+    "\n",
+    "    $ git add -A\n",
+    "\n",
+    "*<p>2-4. Commit changes*</p>\n",
+    "\n",
+    "    $ git commit -m ('commit message')\n",
+    "\n",
+    "*<p>2-5. Remove a file*</p>\n",
+    "\n",
+    "    $ git rm (file name.format)\n",
+    "\n",
+    "*<p>2-6. Remove a directory*</p>\n",
+    "\n",
+    "    $ git rm -r (directory name)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "275c2666-94fd-4cd3-832b-728a7971e012",
+   "metadata": {},
+   "source": [
+    "**3. Branching & Merging** <p>*3-1.  List branches*</p>\n",
+    "\n",
+    "    $ git branch\n",
+    "\n",
+    "*<p>3-2. List all branches*</p>\n",
+    "\n",
+    "    $ git brach -a\n",
+    "\n",
+    "*<p>3-3. Create a new branch*</p>\n",
+    "\n",
+    "    $ git branch (branch name)\n",
+    "\n",
+    "*<p>3-4. Delete a branch*</p>\n",
+    "\n",
+    "    $ git branch -d (branch name)\n",
+    "\n",
+    "*<p>3-5. Delete a remote branch*</p>\n",
+    "\n",
+    "    $ git push origin --delete (branch name)\n",
+    "\n",
+    "*<p>3-6. Create a new branch & switch to it*</p>\n",
+    "\n",
+    "    $ git checkout -b (branch name)\n",
+    "\n",
+    "*<p>3-7. Clone a remote branch & switch to it*</p>\n",
+    "\n",
+    "    $ git checkout -b (branch name) origin/(branch name)\n",
+    "\n",
+    "*<p>3-8. Rename a local branch*</p>\n",
+    "\n",
+    "    $ git branch -m (old branch name) (new branch name)\n",
+    "\n",
+    "*<p>3-9. Switch to a branch*</p>\n",
+    "\n",
+    "    $ git checkout (branch name)\n",
+    "\n",
+    "*<p>3-10. Switch to branch last checked out*</p>\n",
+    "\n",
+    "    $ git checkout -\n",
+    "\n",
+    "*<p>3-11. Discard changes to a file*</p>\n",
+    "\n",
+    "    $ git checkout -- (file name.format)\n",
+    "\n",
+    "*<p>3-12. Merge a branch into the active branch*</p>\n",
+    "\n",
+    "    $ gie merge (branch name)\n",
+    "\n",
+    "*<p>3-13. Merge branch into a target branch*</p>\n",
+    "\n",
+    "    $ git merge (source branch) (target branch)\n",
+    "\n",
+    "*<p>3-14. Stash changes in a dirty working directory*</p>\n",
+    "\n",
+    "    $ git stash\n",
+    "\n",
+    "*<p>3-15. Remove all stashed entries*</p>\n",
+    "\n",
+    "    $ git stash clear"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4d22d066-d12c-4ae6-be4a-8cceedaa9b94",
+   "metadata": {},
+   "source": [
+    "**4. Sharing & Updating Projects** <p>*4-1. Push branch to your remote repository</p>*\n",
+    "\n",
+    "    $ git push origin (branch name)\n",
+    "\n",
+    "*<p>4-2. Push changes to rmote repository & remember the branch*</p>\n",
+    "    \n",
+    "    $ git push -u origin (branch name)\n",
+    "\n",
+    "*<p>4-3. Push changes to remote repository & rememered branch*</p>\n",
+    "\n",
+    "    $ git push\n",
+    "\n",
+    "*<p>4-4. Delete a remote branch*</p>\n",
+    "\n",
+    "    $ git push origin --delete (branch name)\n",
+    "\n",
+    "*<p>4-5. Update local repository to the newest commit*</p>\n",
+    "\n",
+    "    $ git pull\n",
+    "\n",
+    "*<p>4-6. Pull changes from remote repository*</p>\n",
+    "\n",
+    "    $ git pull origin (branch name)\n",
+    "\n",
+    "*<p>4-7. Add a remote repository*</p>\n",
+    "\n",
+    "    $ git remote add origin (repository address)\n",
+    "\n",
+    "*<p>4-8. Set a repository's origin branch to SSH*</p>\n",
+    "\n",
+    "    $ git remote set-url origin"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87dc82d9-7463-4c80-951e-be8746b502e1",
+   "metadata": {},
+   "source": [
+    "**5. Other Command Code** <p>*5-1. Print working directory*</p>\n",
+    "\n",
+    "    $ pwd\n",
+    "\n",
+    "*<p>5-2. Change directory*</p>\n",
+    "\n",
+    "    $ cd\n",
+    "\n",
+    "*<p> 5-3. List The Contents Of The Directory*</p>\n",
+    "\n",
+    "    $ ls -a\n",
+    "\n",
+    "*<p>5-4. Make a directory*</p>\n",
+    "\n",
+    "    $mkdir (directory name)\n",
+    "\n",
+    "*<p>5-5. Make a file*</p>\n",
+    "\n",
+    "    $ touch (file name.format)\n",
+    "\n",
+    "*<p>5-6. Conenecting Gitbash to Github*</p>\n",
+    "\n",
+    "    $ git remote\n",
+    "\n",
+    "*<p>5-7. Show status of changes as untracked, modified or staged*</p>\n",
+    "\n",
+    "    $ git status"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cd101041-35f2-4d22-aa77-72476a00b169",
+   "metadata": {},
+   "source": [
+    "**6. Update Fork & Pull Request** \n",
+    "\n",
+    "    $ git remote add upstream main_repo_url\n",
+    "\n",
+    "    $ git fetch upstream\n",
+    "\n",
+    "    $ git checkout master\n",
+    "\n",
+    "    $ git merge upstream\n",
+    "\n",
+    "    $ git push origin master"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "57ae668c-16f5-475d-a9e2-5b9d1df4cde5",
+   "metadata": {},
+   "source": [
+    "**Example for Start a new Repository & publish it to GitHub:**\n",
+    "*First, you will need to create a bew repository on GitHub.*"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "62cb042a-63f7-4bf4-8847-2e2a5eeda313",
+   "metadata": {},
+   "source": [
+    "**create a new directory, and initialize it with git-specific functions**\n",
+    "\n",
+    "    git init my-repo\n",
+    "\n",
+    "**change into the 'my-repo' directory**\n",
+    "\n",
+    "    cd my-repo\n",
+    "\n",
+    "**create the first file in the project**\n",
+    "\n",
+    "    touch readme.md\n",
+    "\n",
+    "**git isn't aware of the file, stage it**\n",
+    "\n",
+    "    git add readme.md\n",
+    "\n",
+    "**take a snapshot of the staging area**\n",
+    "\n",
+    "    git commit -m 'add readme to initial commit'\n",
+    "\n",
+    "**provide the path for the repository you create on GitHub**\n",
+    "    \n",
+    "    git remote add origin https://github.com/your-username/your-repository-name.git\n",
+    "\n",
+    "**push changes to GitHub**\n",
+    "\n",
+    "    git push --set-upstream origin main"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7863748f-dca7-4133-b070-099156649753",
+   "metadata": {},
+   "source": [
+    "**Source:** https://github.com/joshnh/Git-Commands.git"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
